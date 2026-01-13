@@ -313,7 +313,7 @@ const ReelsView = () => (
 const GlobalPlazaInterface = () => (
   <div className="h-full bg-[#050505] rounded-[48px] border border-white/5 overflow-hidden flex flex-col shadow-2xl">
     <div className="p-8 border-b border-white/5 shrink-0 flex items-center justify-between">
-      <h2 className="text-2xl font-black italic italic">GLOBAL PLAZA</h2>
+      <h2 className="text-2xl font-black italic">GLOBAL PLAZA</h2>
       <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg"></div>
     </div>
     <div className="flex-1 overflow-y-auto p-10 space-y-8 bg-[#020202] no-scrollbar">
@@ -378,7 +378,7 @@ const VideoOverlay = ({ video, onClose }: any) => (
           <div className="absolute inset-0 bg-indigo-950/60 backdrop-blur-[100px] flex flex-col items-center justify-center text-center p-20 z-50">
             <Shield size={100} className="text-red-500 mb-10 animate-pulse" />
             <h2 className="text-4xl font-black uppercase italic mb-4">SECURITY FREEZE</h2>
-            <p className="text-gray-400 max-w-sm font-black italic italic">Pride AI has blocked this content for community safety violations.</p>
+            <p className="text-gray-400 max-w-sm font-black italic">Pride AI has blocked this content for community safety violations.</p>
           </div>
         ) : (
           <div className="w-24 h-24 rounded-full bg-white/5 flex items-center justify-center border border-white/10 animate-pulse shadow-2xl"><Play size={40} className="fill-white" /></div>
