@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Pride Prime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { 
+          font-family: 'Outfit', sans-serif; 
+          overflow-x: hidden;
+          background-color: #050505;
+        }
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: #050505; }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #333; }
+        
+        /* Splash Animation */
+        #splash-screen {
+          position: fixed;
+          inset: 0;
+          background: #050505;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
+          transition: opacity 0.5s ease, visibility 0.5s;
+        }
+        .splash-logo {
+          font-size: 5rem;
+          font-weight: 900;
+          font-style: italic;
+          letter-spacing: -0.1em;
+          background: linear-gradient(135deg, #7c3aed, #db2777);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          animation: logo-pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        @keyframes logo-pop {
+          to { opacity: 1; transform: scale(1); }
+        }
+        .fade-out { opacity: 0; visibility: hidden; }
+        
+        .app-entry {
+          animation: app-fade 0.8s ease forwards;
+        }
+        @keyframes app-fade {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="bg-[#050505] text-white">
+    <div id="splash-screen">
+      <div class="splash-logo">PP</div>
+    </div>
+    <div id="root"></div>
+    <script>
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          document.getElementById('splash-screen').classList.add('fade-out');
+        }, 800);
+      });
+    </script>
+</body>
+</html>

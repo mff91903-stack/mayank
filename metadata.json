@@ -1,0 +1,8 @@
+{
+  "name": "Pride Prime",
+  "description": "A premium social media ecosystem featuring long-form video, reels, AI assistance, and professional community servers.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
